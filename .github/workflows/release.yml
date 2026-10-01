@@ -30,7 +30,7 @@ jobs:
         with:
           next-version: ${{ inputs.next-version }}
         env:
-          MAVEN_ARGS: --activate-profiles release -Dgpg.skip
+          MAVEN_ARGS: --activate-profiles release -Dgpg.skip -Dmaven.deploy.file.skip
           MAVEN_USERNAME: ${{ secrets.SONATYPE_OSS_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.SONATYPE_OSS_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}

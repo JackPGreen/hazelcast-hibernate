@@ -24,8 +24,8 @@ jobs:
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
 
-      - name: Deploy snapshot
-        run: ./mvnw deploy -Prelease-snapshot --batch-mode --no-transfer-progress --update-snapshots -DskipTests -DretryFailedDeploymentCount=3
+      - uses: JackPGreen/maven-release-tooling/deploy@init
         env:
+          MAVEN_ARGS: --activate-profiles release-snapshot
           MAVEN_USERNAME: ${{ secrets.SONATYPE_OSS_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.SONATYPE_OSS_PASSWORD }}

@@ -198,6 +198,7 @@
                         </goals>
 
                         <configuration>
+                            <finalName>${project.build.finalName}</finalName>
                             <createSourcesJar>true</createSourcesJar>
                             <shadeSourcesContent>true</shadeSourcesContent>
                             <artifactSet>

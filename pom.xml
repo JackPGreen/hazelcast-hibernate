@@ -198,7 +198,7 @@
                         </goals>
 
                         <configuration>
-                            <finalName>${project.build.finalName}</finalName>
+                            <outputFile>${project.build.directory}/${project.build.finalName}.jar</outputFile>.
                             <createSourcesJar>true</createSourcesJar>
                             <shadeSourcesContent>true</shadeSourcesContent>
                             <artifactSet>
